@@ -1,0 +1,7 @@
+h2 a blog a journal a litany
+
+
+ul
+  each article, slug in public.blog.articles._data
+    li
+      a(href="/blog/articles/#{ slug }") #{ article.title }
