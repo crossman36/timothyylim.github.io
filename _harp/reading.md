@@ -1,19 +1,15 @@
 ### reading list
 
 
-**Currently reading**
+**currently reading**
 - Debt: The First 5000 Years, _David Graeber_
 - Walden, _Henry David Thoreau_ 
 - Letters from a Stoic, _Seneca_
 
-**To read**
-- Obliquity, _John Kay_
-- Austerity, _Mark Blyth_
-- Hackers and Painters, _Paul Graham_ 
-- All Day Long, _Joanna Biggs_
-- Trouble In Paradise, _Slavoj Zizek_
+**articles that have stuck**
+- (On The Phenomenon of Bullshit Jobs, _David Graeber_)[http://strikemag.org/bullshit-jobs/]
 
-**Have read**
+**books that have stuck**
 
 2016
 
@@ -27,4 +23,11 @@
 - Growth of the Soil, _Knut Hamsun_
 - Hunger, _Knut Hamsun_
 - Notes from The Underground, _Dostoyevksy_
+
+**to read**
+- Obliquity, _John Kay_
+- Austerity, _Mark Blyth_
+- Hackers and Painters, _Paul Graham_ 
+- All Day Long, _Joanna Biggs_
+- Trouble In Paradise, _Slavoj Zizek_
 
