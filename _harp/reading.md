@@ -10,6 +10,8 @@
 - Obliquity, _John Kay_
 - Austerity, _Mark Blyth_
 - Hackers and Painters, _Paul Graham_ 
+- All Day Long, _Joanna Biggs_
+- Trouble In Paradise, _Slavoj Zizek_
 
 **Have read**
 
