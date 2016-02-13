@@ -7,7 +7,8 @@
 - Letters from a Stoic, _Seneca_
 
 **articles that have stuck**
-- (On The Phenomenon of Bullshit Jobs, _David Graeber_)[http://strikemag.org/bullshit-jobs/]
+- [On The Phenomenon of Bullshit Jobs, _David
+  Graeber_](http://strikemag.org/bullshit-jobs/)
 
 **books that have stuck**
 
