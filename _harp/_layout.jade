@@ -3,4 +3,11 @@ html
   head
     link(rel="stylesheet" href="/main.css")
   body
-    != yield
+    .container.wrapper
+      .container.navbar
+        ul
+          li 
+            a(href="/") timothy lim
+          li
+            a(href="/blog") blog
+      != yield

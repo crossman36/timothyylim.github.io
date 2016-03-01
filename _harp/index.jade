@@ -1,24 +1,27 @@
-style.
-  ul{
-    padding: 0;
-    line-height: 250%;
-    list-style-type: none;
-  }
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title= 'Timothy Lim'
+    link(href='main.css', rel='stylesheet')
 
-h3 timothy lim
-
-
-
-ul
-    a(href='/') code
-    |  - it is what it is <br />
-    a(href='/') notene
-    | - essays on life (forthcoming) <br />
-    a(href='/') øyet
-    |  - photos of life (also forthcoming) <br />
-    a(href='/tutorials/tutorials-index.html') tutorials
-    |  - programming guides mostly <br />
-    a(href='/') blog
-    | - a journal of programming fixes <br />
-    a(href='/about.html') whoami
-    | - who i am
+  body
+      .container.main
+        .container.photo
+          img(src= "summer-snow2.jpg")
+        .container.description 
+          p 
+            i code is worse than cocaine, it hooks you 
+            i without even having the decency to kill you
+            br
+            br
+            | programmer in london currently working in two directions: 
+            br
+            br
+            | 1. mastering the LAMP stack 
+            br
+            | 2. hacking ethereum
+            br
+            br
+            | hopefully they converge at some point.
+        

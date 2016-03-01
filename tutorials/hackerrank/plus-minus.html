@@ -1,0 +1,64 @@
+<!DOCTYPE html><html><head><link rel="stylesheet" href="/main.css"></head><body><div class="container wrapper"><div class="container navbar"><ul><li> <a href="/">timothy lim</a></li><li><a href="/blog">blog</a></li></ul></div><h3>plus minus</h3><p>Given an array of integers, calculate which fraction of the elements are positive, negative, and zeroes, respectively. Print the decimal value of each fraction.</p>
+<p><strong><em>Input Format</em></strong></p>
+<p>The first line, NN, is the size of the array. 
+The second line contains NN space-separated integers describing the array of numbers.</p>
+<p><strong><em>Output Format</em></strong></p>
+<p>Print each value on its own line with the fraction of positive numbers first, negative numbers second, and zeroes third.</p>
+<p>Sample Input</p>
+<pre><code>6
+-4 3 -9 0 4 1
+</code></pre><p>Sample Output</p>
+<pre><code>0.500000
+0.333333
+0.166667
+</code></pre><p>Explanation</p>
+<p>There are 3 positive numbers, 2 negative numbers, and 1 zero in the array. 
+The fraction of the positive numbers, negative numbers and zeroes are 3/6=0.500000, 2/6=0.33333326=0.333333 and 1/6=0.166667 respectively.</p>
+<p>c++</p>
+<pre><code>int main(){
+    int n;
+    cin &gt;&gt; n;
+    vector&lt;int&gt; arr(n);
+    for(int arr_i = 0;arr_i &lt; n;arr_i++){
+       cin &gt;&gt; arr[arr_i];
+    }
+
+    double negatives = 0;
+    double zeroes = 0;
+    double positives = 0;
+
+    for(int i =0; i &lt; n; i++){
+        if(arr[i] &lt; 0) negatives++;
+        if(arr[i]==0) zeroes++;
+        if(arr[i] &gt; 0) positives++;
+    }
+
+    cout &lt;&lt; positives/n &lt;&lt; endl;
+    cout &lt;&lt; negatives/n &lt;&lt; endl;
+    cout &lt;&lt; zeroes/n &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre><p>php</p>
+<pre><code>&lt;?php
+
+$handle = fopen (&quot;php://stdin&quot;,&quot;r&quot;);
+fscanf($handle,&quot;%d&quot;,$n);
+$arr_temp = fgets($handle);
+$arr = explode(&quot; &quot;,$arr_temp);
+array_walk($arr,&#39;intval&#39;);
+
+$negatives = 0;
+$zeroes = 0;
+$positives = 0;
+
+for ($i=0; $i&lt;$n; $i++){
+    if($arr[$i] &lt; 0) $negatives++;
+    if($arr[$i] == 0) $zeroes++;
+    if($arr[$i] &gt;0 ) $positives++;
+}
+
+echo $positives/$n. PHP_EOL . $negatives/$n . PHP_EOL . $zeroes/$n;
+
+?&gt;
+</code></pre></div></body></html>

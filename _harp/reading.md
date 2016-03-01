@@ -3,8 +3,10 @@
 
 **currently reading**
 - Debt: The First 5000 Years, _David Graeber_
+- The Utopia of Rules, _David Graeber_
 - Walden, _Henry David Thoreau_ 
 - Letters from a Stoic, _Seneca_
+
 
 **articles that have stuck**
 - [On The Phenomenon of Bullshit Jobs, _David
