@@ -2,7 +2,7 @@
 
 This article assumes that you've completed the ['hello world' H5P tutorial](https://h5p.org/tutorial-greeting-card) until the stage where you have to upload a package.
 
-When uploading h5p packages to drupal with osx the following you may encouter the following errors:
+When uploading h5p packages to drupal with osx, you may encouter the following errors:
 
 ```
 Could not find library.json file with valid json format for library greeting
@@ -10,11 +10,11 @@ A valid content folder is missing
 A valid main h5p.json file is missing
 ```
 
-As mentioned in the comments, these errors are caused by 1. zipping the project folder as opposed to all the files within it.
+As mentioned in the comments on the tutorial page, these errors are caused by zipping the project folder as opposed to all the files within it.
 
-This can be done with terminal (we will use the greeter tutorial as an example):
+We can zip all the files within the project file using the terminal (we will use the greeter tutorial as an example):
 
-Navigate inside the project
+Navigate into the project
 
 ```
 $ cd greeting
@@ -49,7 +49,7 @@ Remove the corrupted zip file if you haven't already
 $ rm -rf greeting.h5p
 ``` 
 
-Recursively delete the .DS_Store files, don't open the directory in finder after this step
+Recursively delete the .DS_Store files, don't open the directory in Finder after this step
 
 ```
 $ find . -name '.DS_Store' -delete
