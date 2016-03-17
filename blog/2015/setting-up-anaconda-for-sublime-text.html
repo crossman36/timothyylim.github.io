@@ -1,0 +1,27 @@
+<!DOCTYPE html><html><head><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script><script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script><link rel="stylesheet" href="/main.css"><link rel="stylesheet" href="main.css"></head><body><div class="container"><div style="padding: 0px; margin: 10px" class="row"><nav class="navbar navbar-default"><div class="container-fluid"><!-- Brand and toggle get grouped for better mobile display--><div class="navbar-header"><button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand">timothy lim</a></div><!-- Collect the nav links, forms, and other content for toggling--><div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse"><ul class="nav navbar-nav navbar-right"><li class="active"></li><li><a href="/">about</a></li><li><a href="/code">code</a></li><li><a href="/blog">blog</a></li></ul></div></div></nav></div><div style="padding: 0px; margin: 10px; margin-left: 27px; margin-bottom: 80px"><h3>Setting Up Anaconda for Sublime Text</h3><p>Windows:</p>
+<ol>
+<li>Download and install Anaconda</li>
+<li>Create a new build system in Sublime (Tools &gt; Build System &gt; New Build System)</li>
+<li>Replace contents with the following, where C:/Anaconda/python.exe is the path
+to the python build in your Anaconda directory</li>
+</ol>
+<pre><code>{
+&quot;cmd&quot;: [&quot;C:/Anaconda/python.exe&quot;, &quot;-u&quot;, &quot;$file&quot;],
+&quot;file_regex&quot;: &quot;^[ ]*File \&quot;(...*?)\&quot;, line ([0-9]*)&quot;,
+&quot;selector&quot;: &quot;source.python&quot;
+}
+</code></pre><p>Open up your terminal (Windows Home Button &gt; All Apps &gt; Command Prompt)
+Check if you have installed pip by typing in:</p>
+<pre><code>pip
+</code></pre><p>then to install pandas and pandasql</p>
+<pre><code>pip pandas 
+pip pandasql
+</code></pre><p>Mac:</p>
+<ol>
+<li>Download and install Anaconda</li>
+<li>Then install pandas in your terminal</li>
+<li>conda install pandasql</li>
+</ol>
+<p>To install pandasql simply enter this into your terminal:</p>
+<pre><code>conda install pandasql
+</code></pre></div></div></body></html>
