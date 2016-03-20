@@ -1,0 +1,95 @@
+<!DOCTYPE html><html><head><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script><script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script><link rel="stylesheet" href="/main.css"><link rel="stylesheet" href="main.css"></head><body><div class="container"><div style="padding: 0px; margin: 10px" class="row"><nav class="navbar navbar-default"><div class="container-fluid"><!-- Brand and toggle get grouped for better mobile display--><div class="navbar-header"><button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand">timothy lim</a></div><!-- Collect the nav links, forms, and other content for toggling--><div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse"><ul class="nav navbar-nav navbar-right"><li class="active"></li><li><a href="/">about</a></li><li><a href="/code">code</a></li><li><a href="/blog">blog</a></li></ul></div></div></nav></div><div style="padding: 0px; margin: 10px; margin-left: 27px; margin-bottom: 80px"><h3>the anatomy of a h5p javascript file</h3><p>For someone pretty new to javascript, the code structure of a h5p javascript file took me a bit of time to get my head around. Essentially, it can broken down to the following components:</p>
+<ol>
+<li><p>&#39;constructor function&#39; which creates the H5P object</p>
+</li>
+<li><p>&#39;attach function&#39; which attaches the content defined in the constructor to the page</p>
+</li>
+</ol>
+<p>The code skeleton looks like this:</p>
+<pre><code>var H5P = H5P || {};
+
+H5P.GreetingCard = (function ($) {
+  /**
+   * Constructor function.
+   */
+  function C(options, id) {
+    // Extend defaults with provided options
+  };
+
+  /**
+   * Attach function called by H5P framework to insert H5P content into
+   * page
+   *
+   * @param {jQuery} $container
+   */
+  C.prototype.attach = function ($container) {
+  };
+
+  return C;
+})(H5P.jQuery);
+</code></pre><p>Let&#39;s build the <a href="https://h5p.org/tutorial-greeting-card">hello world tutorial</a> but without the image for the sake of simplicity. </p>
+<p>To create a greeting of &#39;Hello world!&#39; we need to extend the constructor of the H5P object so that it is created with some text:</p>
+<pre><code>  function C(options, id) {
+    // Extend defaults with provided options
+    this.options = $.extend(true, {}, {
+      greeting: &#39;Hello world!&#39;
+    }, options);
+
+    this.id = id;
+  };
+</code></pre><p>This simply allows the object to extend its options to now have a greeting attribute (it doesn&#39;t have to be called greeting) as &#39;Hello world!&#39;. </p>
+<p>Next, we have to attach the text to the page itself. The H5P framework interacts with the page by giving the page a container that will be displayed to user. We can put things into this container by adding to our attach function we defined earlier:</p>
+<pre><code>  /**
+   * Attach function called by H5P framework to insert H5P content into
+   * page
+   *
+   * @param {jQuery} $container
+   */
+
+  C.prototype.attach = function ($container) {
+    // Set class on container to identify it as a greeting card
+    // container.  Allows for styling later.
+    $container.addClass(&quot;h5p-greetingcard&quot;);
+
+    // Add greeting text.
+    $container.append(&#39;&lt;div class=&quot;greeting-text&quot;&gt;&#39; + this.options.greeting + &#39;&lt;/div&gt;&#39;);
+  };
+</code></pre><p>This creates a new div on the page which is populated by the text we defined earlier in &#39;this.options.greeting&#39;. </p>
+<p>We can go back over the file to add an image if we want to. The final result would look something like this:</p>
+<pre><code>var H5P = H5P || {};
+
+H5P.GreetingCard = (function ($) {
+  /**
+   * Constructor function.
+   */
+  function C(options, id) {
+    // Extend defaults with provided options
+    this.options = $.extend(true, {}, {
+      greeting: &#39;Hello world!&#39;,
+      image: null
+    }, options);
+    // Keep provided id.
+    this.id = id;
+  };
+
+  /**
+   * Attach function called by H5P framework to insert H5P content into
+   * page
+   *
+   * @param {jQuery} $container
+   */
+  C.prototype.attach = function ($container) {
+    // Set class on container to identify it as a greeting card
+    // container.  Allows for styling later.
+    $container.addClass(&quot;h5p-greetingcard&quot;);
+    // Add image if provided.
+    if (this.options.image &amp;&amp; this.options.image.path) {
+      $container.append(&#39;&lt;img class=&quot;greeting-image&quot; src=&quot;&#39; + H5P.getPath(this.options.image.path, this.id) + &#39;&quot;&gt;&#39;);
+    }
+    // Add greeting text.
+    $container.append(&#39;&lt;div class=&quot;greeting-text&quot;&gt;&#39; + this.options.greeting + &#39;&lt;/div&gt;&#39;);
+  };
+
+  return C;
+})(H5P.jQuery);
+</code></pre></div></div></body></html>
