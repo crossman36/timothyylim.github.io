@@ -1,6 +1,230 @@
-<!DOCTYPE html><html><head><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script><script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script><link rel="stylesheet" href="/main.css"><link rel="stylesheet" href="main.css"></head><body><div class="container"><div style="padding: 0px; margin: 10px" class="row"><nav class="navbar navbar-default"><div class="container-fluid"><!-- Brand and toggle get grouped for better mobile display--><div class="navbar-header"><button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand">timothy lim</a></div><!-- Collect the nav links, forms, and other content for toggling--><div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse"><ul class="nav navbar-nav navbar-right"><li class="active"></li><li><a href="/">about</a></li><li><a href="/code">code</a></li><li><a href="/blog">blog</a></li></ul></div></div></nav></div><div style="padding: 0px; margin: 10px; margin-left: 27px; margin-bottom: 80px"><h3>the anatomy of a h5p javascript file pt 2</h3><p>To get a better understanding of H5P we will break down the following example called &quot;Guess the Answer&quot;:</p>
+<!DOCTYPE html><html><head><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script><script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script><link rel="stylesheet" href="/main.css"><link rel="stylesheet" href="main.css"></head><body><div class="container"><div style="padding: 0px; margin: 10px" class="row"><nav class="navbar navbar-default"><div class="container-fluid"><!-- Brand and toggle get grouped for better mobile display--><div class="navbar-header"><button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand">timothy lim</a></div><!-- Collect the nav links, forms, and other content for toggling--><div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse"><ul class="nav navbar-nav navbar-right"><li class="active"></li><li><a href="/">about</a></li><li><a href="/code">code</a></li><li><a href="/blog">blog</a></li></ul></div></div></nav></div><div style="padding: 0px; margin: 10px; margin-left: 27px; margin-bottom: 80px"><h3>the anatomy of a h5p javascript file pt 2</h3><p>To get a better understanding of H5P we will build the javascript file from the ground up for the example called &quot;Guess the Answer&quot;:</p>
 <p><iframe src="https://h5p.org/h5p/embed/2398" width="618" height="388" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script></p>
+<p>Start with the skeleton as we did in <a href="http://timothyylim.github.io/blog/2016/the-anatomy-of-a-h5p-javascript-file-pt-1">pt 1</a>:</p>
 <pre><code>var H5P = H5P || {};
+
+H5P.GreetingCard = (function ($) {
+  /**
+   * Constructor function.
+   */
+  function C(options, id) {
+    // Extend defaults with provided options
+  };
+
+  /**
+   * Attach function called by H5P framework to insert H5P content into
+   * page
+   *
+   * @param {jQuery} $container
+   */
+  C.prototype.attach = function ($container) {
+  };
+
+  return C;
+})(H5P.jQuery);
+</code></pre><p>From the example we know we need the following:</p>
+<ul>
+<li>a question (taskDescription)</li>
+<li>an image (solutionImage)</li>
+<li>a button (solutionLabel)</li>
+<li>a solution (solutionText)</li>
+</ul>
+<p>We can add this to the constructor</p>
+<pre><code>  /**
+   * Constructor function.
+   */
+  function C(params, id) {
+    // Extend defaults with provided options
+    this.params = $.extend({}, {
+      taskDescription: &#39;&#39;,
+      solutionLabel: &#39;Click to see the answer.&#39;,
+      solutionImage: null,
+      solutionText: &#39;&#39;
+    }, params);
+
+    // Keep provided ID
+    this.$ = $(this);
+    this.id = id;
+
+  }
+</code></pre><p>Insert H5P object into the page with the attach function</p>
+<pre><code>  /**
+   * Attach function called by H5P framework to insert H5P content into page.
+   *
+   * @param {jQuery} $container The container which will be appended to.
+   */
+  C.prototype.attach = function ($container) {
+    this.setActivityStarted();
+    this.$inner = $container.addClass(&#39;h5p-guess-answer&#39;)
+      .html(&#39;&lt;div&gt;&lt;/div&gt;&#39;)
+      .children();
+
+    //Attach task description, if provided.
+    this.addTaskDescriptionTo(this.$inner);
+
+    //Attach image, if provided.
+    this.addImageTo(this.$inner);
+
+    //Attach solution container.
+    this.addSolutionContainerTo(this.$inner);
+  };
+</code></pre><p>Finally, create seperate divs for each of the parameters we defined in the constructor</p>
+<pre><code>  /**
+   * Adds a task description if provided in semantics, to the provided container.
+   *
+   * @param {jQuery} $container The container which will be appended to.
+   */
+  C.prototype.addTaskDescriptionTo = function ($container) {
+    if (this.params.taskDescription) {
+      $(&#39;&lt;div/&gt;&#39;, {
+        &#39;class&#39;: &#39;h5p-guess-answer-title&#39;,
+        html: this.params.taskDescription
+      }).appendTo($container);
+    }
+  };
+
+  /**
+   * Adds image to the provided container.
+   *
+   * @param {jQuery} $container The container which will be appended to.
+   */
+  C.prototype.addImageTo = function ($container) {
+    var self = this;
+
+    if (self.params.solutionImage &amp;&amp; self.params.solutionImage.path) {
+      var $imageHolder = $(&#39;&lt;div/&gt;&#39;, {
+        &#39;class&#39;: &#39;h5p-guess-answer-image-container&#39;
+      }).append($(&#39;&lt;img/&gt;&#39;, {
+        &#39;class&#39;: &#39;h5p-guess-answer-image&#39;,
+        src: H5P.getPath(self.params.solutionImage.path, self.id),
+        load: function () {
+          self.trigger(&#39;resize&#39;);
+        }
+      }));
+
+      $imageHolder.appendTo($container);
+    }
+  };
+
+  /**
+   * Adds a solution container to the provided container.
+   *
+   * @param {jQuery} $container The container which will be appended to.
+   */
+  C.prototype.addSolutionContainerTo = function ($container) {
+    var self = this;
+
+    self.$solutionContainer = $(&#39;&lt;div/&gt;&#39;, {
+      &#39;class&#39;: &#39;h5p-guess-answer-solution-container&#39;,
+      html: this.params.solutionLabel
+    }).click(function () {
+      $(this).addClass(&#39;h5p-guess-answer-showing-solution&#39;).html(self.params.solutionText);
+      self.trigger(&#39;resize&#39;);
+    }).appendTo($container);
+  };
+</code></pre><p>The final file would look like this</p>
+<pre><code>var H5P = H5P || {};
+
+/**
+ * Guess the answer module
+ * @external {jQuery} $ H5P.jQuery
+ */
+H5P.GuessTheAnswer = (function ($) {
+  /**
+   * Constructor function.
+   */
+  function C(params, id) {
+    // Extend defaults with provided options
+    this.params = $.extend({}, {
+      taskDescription: &#39;&#39;,
+      solutionLabel: &#39;Click to see the answer.&#39;,
+      solutionImage: null,
+      solutionText: &#39;&#39;
+    }, params);
+
+    // Keep provided ID
+    this.$ = $(this);
+    this.id = id;
+
+  }
+  /**
+   * Attach function called by H5P framework to insert H5P content into page.
+   *
+   * @param {jQuery} $container The container which will be appended to.
+   */
+  C.prototype.attach = function ($container) {
+    this.setActivityStarted();
+    this.$inner = $container.addClass(&#39;h5p-guess-answer&#39;)
+      .html(&#39;&lt;div&gt;&lt;/div&gt;&#39;)
+      .children();
+
+    //Attach task description, if provided.
+    this.addTaskDescriptionTo(this.$inner);
+
+    //Attach image, if provided.
+    this.addImageTo(this.$inner);
+
+    //Attach solution container.
+    this.addSolutionContainerTo(this.$inner);
+  };
+
+  /**
+   * Adds a task description if provided in semantics, to the provided container.
+   *
+   * @param {jQuery} $container The container which will be appended to.
+   */
+  C.prototype.addTaskDescriptionTo = function ($container) {
+    if (this.params.taskDescription) {
+      $(&#39;&lt;div/&gt;&#39;, {
+        &#39;class&#39;: &#39;h5p-guess-answer-title&#39;,
+        html: this.params.taskDescription
+      }).appendTo($container);
+    }
+  };
+
+  /**
+   * Adds image to the provided container.
+   *
+   * @param {jQuery} $container The container which will be appended to.
+   */
+  C.prototype.addImageTo = function ($container) {
+    var self = this;
+
+    if (self.params.solutionImage &amp;&amp; self.params.solutionImage.path) {
+      var $imageHolder = $(&#39;&lt;div/&gt;&#39;, {
+        &#39;class&#39;: &#39;h5p-guess-answer-image-container&#39;
+      }).append($(&#39;&lt;img/&gt;&#39;, {
+        &#39;class&#39;: &#39;h5p-guess-answer-image&#39;,
+        src: H5P.getPath(self.params.solutionImage.path, self.id),
+        load: function () {
+          self.trigger(&#39;resize&#39;);
+        }
+      }));
+
+      $imageHolder.appendTo($container);
+    }
+  };
+
+  /**
+   * Adds a solution container to the provided container.
+   *
+   * @param {jQuery} $container The container which will be appended to.
+   */
+  C.prototype.addSolutionContainerTo = function ($container) {
+    var self = this;
+
+    self.$solutionContainer = $(&#39;&lt;div/&gt;&#39;, {
+      &#39;class&#39;: &#39;h5p-guess-answer-solution-container&#39;,
+      html: this.params.solutionLabel
+    }).click(function () {
+      $(this).addClass(&#39;h5p-guess-answer-showing-solution&#39;).html(self.params.solutionText);
+      self.trigger(&#39;resize&#39;);
+    }).appendTo($container);
+  };
+
+  return C;
+})(H5P.jQuery);
+</code></pre><pre><code>var H5P = H5P || {};
 
 /**
  * Guess the answer module
