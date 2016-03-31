@@ -7,6 +7,7 @@
 - Walden, _Henry David Thoreau_ 
 - Letters from a Stoic, _Seneca_
 - Factotum, _Charles Buowski_
+- When Breath Becomes Air, _Paul Kalanithi_
 
 ---
 
