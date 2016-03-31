@@ -6,11 +6,17 @@
 - The Utopia of Rules, _David Graeber_
 - Walden, _Henry David Thoreau_ 
 - Letters from a Stoic, _Seneca_
-
+- Factotum, _Charles Buowski_
 
 ---
 
 **read**
+
+Essays
+- [On The Phenomenon of Bullshit Jobs, _David
+  Graeber_](http://strikemag.org/bullshit-jobs/)
+- [How To Do What You Love, _Paul Graham_](http://www.paulgraham.com/love.html)
+---
 
 2016
 
@@ -21,9 +27,6 @@
 - Chavs, _Owen Jones_
 - Fight Club, _Chuck Palahniuk_
 ---
-- [On The Phenomenon of Bullshit Jobs, _David
-  Graeber_](http://strikemag.org/bullshit-jobs/)
----
 
 2015 and before 
 
@@ -33,8 +36,9 @@
 
 ---
 
-**will read**
+**will get round to reading, eventually**
 
+- American Psycho, _Bret Easton Ellis_
 - Zero to One, _Peter Thiel_
 - History of The World, _Andrew Marr_
 - Man's Search For Meaning, _Viktor Frankel_
