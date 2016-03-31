@@ -34,6 +34,8 @@ Essays
 - Growth of the Soil, _Knut Hamsun_
 - Hunger, _Knut Hamsun_
 - Notes from The Underground, _Dostoyevksy_
+- The Story of Art, _E. H. Gombrich
+
 
 ---
 
