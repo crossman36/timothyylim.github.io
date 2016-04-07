@@ -27,6 +27,7 @@ Essays
 - It's Not How Good You Are, It's How Good You Want to Be, _Paul Arden_ 
 - Chavs, _Owen Jones_
 - Fight Club, _Chuck Palahniuk_
+- Extreme Early Retirement, _Jacob Lund Fisker_
 ---
 
 2015 and before 
@@ -34,7 +35,7 @@ Essays
 - Growth of the Soil, _Knut Hamsun_
 - Hunger, _Knut Hamsun_
 - Notes from The Underground, _Dostoyevksy_
-- The Story of Art, _E. H. Gombrich
+- The Story of Art, _E. H. Gombrich_
 
 
 ---
