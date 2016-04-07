@@ -21,6 +21,7 @@ Essays
 
 2016
 
+- Dead Man Working, _Carl Cederstrom_
 - Black Swan, _Nicolas Nassim Taleb_
 - Young Money, _Kevin Roose_
 - Femme Fatale, _Guy de Maupassant_ 
