@@ -11,6 +11,7 @@
 - The Gold Standard and the International Monetary System 1900-1939, _Ian M. Drummond_
 - Crypto Currency, _Paul Vigna_
 - Mastering Bitcoin, _Andreas Antonopoulous_
+- At the Existentialist Café, _Sarah Bakewell_
 
 ---
 
