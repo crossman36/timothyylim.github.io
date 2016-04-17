@@ -8,6 +8,9 @@
 - Letters from a Stoic, _Seneca_
 - Factotum, _Charles Bukowski_
 - When Breath Becomes Air, _Paul Kalanithi_
+- The Gold Standard and the International Monetary System 1900-1939, _Ian M. Drummond_
+- Crypto Currency, _Paul Vigna_
+- Mastering Bitcoin, _Andreas Antonopoulous_
 
 ---
 
@@ -17,6 +20,7 @@ Essays
 - [On The Phenomenon of Bullshit Jobs, _David
   Graeber_](http://strikemag.org/bullshit-jobs/)
 - [How To Do What You Love, _Paul Graham_](http://www.paulgraham.com/love.html)
+
 ---
 
 2016
@@ -29,6 +33,7 @@ Essays
 - Chavs, _Owen Jones_
 - Fight Club, _Chuck Palahniuk_
 - Extreme Early Retirement, _Jacob Lund Fisker_
+
 ---
 
 2015 and before 
