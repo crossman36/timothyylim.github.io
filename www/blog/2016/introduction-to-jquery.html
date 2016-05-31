@@ -1,0 +1,59 @@
+<!DOCTYPE html><html><head><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script><script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script><link rel="stylesheet" href="/main.css"><link rel="stylesheet" href="main.css"></head><body><div class="container"><div style="padding: 0px; margin: 10px" class="row"><nav class="navbar navbar-default"><div class="container-fluid"><!-- Brand and toggle get grouped for better mobile display--><div class="navbar-header"><button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand">timothy lim</a></div><!-- Collect the nav links, forms, and other content for toggling--><div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse"><ul class="nav navbar-nav navbar-right"><li class="active"></li><li><a href="/">about</a></li><li><a href="/code">code</a></li><li><a href="/blog">blog</a></li></ul></div></div></nav></div><div style="padding: 0px; margin: 10px; margin-left: 27px; margin-bottom: 80px"><h3>introduction to jquery</h3><p><em>the following examples are loosely based on the tutorials at <a href="try.jquery.com">try.jquery.com</a></em></p>
+<p><strong>selecting elements</strong></p>
+<p>The point of jquery is to lend interactivity to a web page. The first step in that process is the selection of HTML elements. Let&#39;s start with the following example</p>
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;jQuery Hello World&lt;/title&gt;
+
+&lt;!--include jquery library here --&gt; 
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h2&gt;My header&lt;/h2&gt;
+  &lt;p&gt;Let&#39;s change this text: &lt;span&gt;change me!&lt;/span&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>To select h2, it&#39;s as simple as typing the following into the console</p>
+<pre><code>$(&quot;h2&quot;)
+</code></pre><p>If there were more than one h2&#39;s this command would select all of them. By the way, the &#39;$&#39; is just a shorthand for &#39;jQuery&#39;. </p>
+<p>Now let&#39;s select the span and then the text value contained within that span</p>
+<pre><code>$(&quot;span&quot;).text()
+</code></pre><p>We can change the value of the span </p>
+<pre><code>$(&quot;span&quot;).text(&quot;changed!&quot;)
+</code></pre><p>Just to be safe, we need to make sure that the page is loaded before we execute any javascript.</p>
+<pre><code>$(document).ready(function() {
+  $(&quot;span&quot;).text(&quot;changed!&quot;);
+});
+</code></pre><p><strong>modifying multiple elements</strong></p>
+<p>Taking a slightly more complicated example</p>
+<pre><code>&lt;div id=&quot;vacations-wrapper&quot;&gt;
+ &lt;h1&gt;Vacation Packages&lt;/h1&gt;
+ &lt;ul id=&quot;vacations&quot;&gt;
+   &lt;li class=&quot;vacation america&quot;&gt;
+     &lt;h2&gt;San Francisco, California&lt;/h2&gt;
+     &lt;span class=&quot;details&quot;&gt;$700&lt;/span&gt;
+   &lt;/li&gt;
+   &lt;li class=&quot;vacation america&quot;&gt;
+     &lt;h2&gt;Washington DC, District of Columbia&lt;/h2&gt;
+     &lt;span class=&quot;details&quot;&gt;$400&lt;/span&gt;
+   &lt;/li&gt;
+   &lt;li class=&quot;vacation europe&quot;&gt;
+     &lt;h2&gt;London, England&lt;/h2&gt;
+     &lt;span class=&quot;details&quot;&gt;$1,100&lt;/span&gt;
+   &lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre><p>We can select and change all the h2 elements </p>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+
+$(document).ready(function(){
+  $(&quot;h2&quot;).text(&quot;Orlando, FL&quot;)
+});
+
+&lt;/script&gt;
+</code></pre><p>Or we can select by id</p>
+<pre><code>$(&quot;#vacations&quot;)
+</code></pre><p>Or by class</p>
+<pre><code>$(&quot;.america&quot;)
+</code></pre><p><a href="http://codepen.io/tctt23/pen/XdevPz">codepen</a></p></div></div></body></html>
