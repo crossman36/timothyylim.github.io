@@ -4,7 +4,7 @@
 **currently reading**
 - Debt: The First 5000 Years, _David Graeber_
 - The Utopia of Rules, _David Graeber_
-- Walden, _Henry David Thoreau_ 
+- Walden, _Henry David Thoreau_
 - Letters from a Stoic, _Seneca_
 - Factotum, _Charles Bukowski_
 - When Breath Becomes Air, _Paul Kalanithi_
@@ -24,14 +24,14 @@ Essays
 - Dead Man Working, _Carl Cederstrom_
 - Black Swan, _Nicolas Nassim Taleb_
 - Young Money, _Kevin Roose_
-- Femme Fatale, _Guy de Maupassant_ 
-- It's Not How Good You Are, It's How Good You Want to Be, _Paul Arden_ 
+- Femme Fatale, _Guy de Maupassant_
+- It's Not How Good You Are, It's How Good You Want to Be, _Paul Arden_
 - Chavs, _Owen Jones_
 - Fight Club, _Chuck Palahniuk_
-- Extreme Early Retirement, _Jacob Lund Fisker_
+- Early Retirement Extreme, _Jacob Lund Fisker_
 ---
 
-2015 and before 
+2015 and before
 
 - Growth of the Soil, _Knut Hamsun_
 - Hunger, _Knut Hamsun_
@@ -43,15 +43,20 @@ Essays
 
 **will get round to reading, eventually**
 
+- How to day trade stocks for profit, _Harvey Walsh_
+- How to Survive Without a Salary, _Charles Long_
 - American Psycho, _Bret Easton Ellis_
 - Zero to One, _Peter Thiel_
 - History of The World, _Andrew Marr_
 - Man's Search For Meaning, _Viktor Frankel_
 - Obliquity, _John Kay_
 - Austerity, _Mark Blyth_
-- Hackers and Painters, _Paul Graham_ 
+- Hackers and Painters, _Paul Graham_
 - All Day Long, _Joanna Biggs_
 - Trouble In Paradise, _Slavoj Zizek_
 - You Belong To The Universe, _Jonathan Keats_
 - Orientalism, _Edward Said_
 
+---
+
+recommendations are welcome: timothylim23[at]gmail.com
