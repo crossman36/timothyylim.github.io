@@ -42,18 +42,19 @@ Essays
 - Hunger, _Knut Hamsun_
 - Notes from The Underground, _Dostoyevksy_
 - The Story of Art, _E. H. Gombrich_
+- Man's Search For Meaning, _Viktor Frankel_
 
 
 ---
 
 **will get round to reading, eventually**
 
-- How to day trade stocks for profit, _Harvey Walsh_
+- Blockchain Revolution, _Don Tapscott_
+- Digital Gold, _Nathanial Popper_
 - How to Survive Without a Salary, _Charles Long_
 - American Psycho, _Bret Easton Ellis_
 - Zero to One, _Peter Thiel_
 - History of The World, _Andrew Marr_
-- Man's Search For Meaning, _Viktor Frankel_
 - Obliquity, _John Kay_
 - Austerity, _Mark Blyth_
 - Hackers and Painters, _Paul Graham_
@@ -61,6 +62,7 @@ Essays
 - Trouble In Paradise, _Slavoj Zizek_
 - You Belong To The Universe, _Jonathan Keats_
 - Orientalism, _Edward Said_
+- How to day trade stocks for profit, _Harvey Walsh_
 
 ---
 
