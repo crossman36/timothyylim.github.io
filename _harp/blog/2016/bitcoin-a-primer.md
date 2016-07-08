@@ -11,9 +11,15 @@ Why bitcoin is punk rock:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/A6kJfvuNqtg" frameborder="0" allowfullscreen></iframe>
 
+<br>
+<br>
+
 A gentler introduction:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3ehQY6M4X5M" frameborder="0" allowfullscreen></iframe>
+
+<br>
+<br>
 
 Andreas Antonopolous on currencies "being worth less than goat shit":
 
