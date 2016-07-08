@@ -4,7 +4,6 @@
 **currently reading**
 - Debt: The First 5000 Years, _David Graeber_
 - The Utopia of Rules, _David Graeber_
-- Walden, _Henry David Thoreau_
 - Letters from a Stoic, _Seneca_
 - Factotum, _Charles Bukowski_
 - When Breath Becomes Air, _Paul Kalanithi_
@@ -27,6 +26,7 @@ Essays
 
 2016
 
+- Walden, _Henry David Thoreau_
 - The Pramgatic Programmer, _Andrew Hunt_
 - Leisure: The Basis of Culture, _Josef Pieper_
 - The Course of Love, _Alain de Botton_
@@ -59,6 +59,7 @@ Essays
 
 **will get round to reading, eventually**
 
+- Grit, _Angela Duckworth_
 - Goodbye, Things: The New Japanese Minimalism, _Fumio Sasaki_
 - Clean Code / The Clean Coder
 - Continuous Delivery, _Jez Humble_
