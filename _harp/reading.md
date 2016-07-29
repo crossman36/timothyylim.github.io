@@ -26,6 +26,9 @@ Essays
 
 2016
 
+- Who owns the future, _Jaron Lanier_
+- You are not a gadget, _Jaron Lanier_
+- Grit, _Angela Duckworth_
 - Walden, _Henry David Thoreau_
 - The Pramgatic Programmer, _Andrew Hunt_
 - Leisure: The Basis of Culture, _Josef Pieper_
@@ -59,7 +62,7 @@ Essays
 
 **will get round to reading, eventually**
 
-- Grit, _Angela Duckworth_
+- The Harrows of Spring, _James Howard Kunstler_
 - Goodbye, Things: The New Japanese Minimalism, _Fumio Sasaki_
 - Clean Code / The Clean Coder
 - Continuous Delivery, _Jez Humble_
@@ -77,7 +80,6 @@ Essays
 - Trouble In Paradise, _Slavoj Zizek_
 - You Belong To The Universe, _Jonathan Keats_
 - Orientalism, _Edward Said_
-- How to day trade stocks for profit, _Harvey Walsh_
 
 ---
 
